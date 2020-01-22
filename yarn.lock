@@ -13347,6 +13347,11 @@ realpath-native@^1.1.0:
   dependencies:
     util.promisify "^1.0.0"
 
+reason-macros-bin@^1.0.0-alpha.2:
+  version "1.0.0-alpha.2"
+  resolved "https://registry.npmjs.org/reason-macros-bin/-/reason-macros-bin-1.0.0-alpha.2.tgz#4b98b75a6482f5210874823849c2e36df621999d"
+  integrity sha512-JpOFNvGzTaPa9T197jHG7MGKDCHdSwO2gHBwdxPeoAWVApnSDfEEGH0/ji4tPqWcZI/9QbjpNox3+0bWiiDQ3w==
+
 reason-react-native@^0.61.0:
   version "0.61.0"
   resolved "https://registry.npmjs.org/reason-react-native/-/reason-react-native-0.61.0.tgz#61579b309305b03c4cc7f44e9b6f2be3603474b4"

@@ -21,7 +21,8 @@
     "doc:serve": "cd documentation && yarn serve",
     "doc:deploy": "cd documentation && yarn build && yarn deploy",
     "playground:publish": "cd playground && expo publish",
-    "bump": "yarn version --cwd lib"
+    "bump": "yarn version --cwd lib",
+    "postinstall" : "chmod +x ./node_modules/reason-macros-bin/*"
   },
   "author": "",
   "license": "ISC",

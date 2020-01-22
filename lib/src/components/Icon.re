@@ -8,40 +8,32 @@ module SvgXml = {
     "SvgXml";
 };
 
-[@bs.module "../icons/email"] external email: string = "default";
-[@bs.module "../icons/email-outline"]
-external emailOutline: string = "default";
-[@bs.module "../icons/eye"] external eye: string = "default";
-[@bs.module "../icons/eye-outline"] external eyeOutline: string = "default";
-[@bs.module "../icons/eye-invisible"]
-external eyeInvisible: string = "default";
-[@bs.module "../icons/eye-invisible-outline"]
-external eyeInvisibleOutline: string = "default";
-[@bs.module "../icons/ok-circle"] external okCircle: string = "default";
-[@bs.module "../icons/calendar"] external calendar: string = "default";
-[@bs.module "../icons/clock-circle-outline"]
-external clockCircleOutline: string = "default";
-[@bs.module "../icons/comment-outline"]
-external commentOutline: string = "default";
-[@bs.module "../icons/cancel-outline"]
-external cancelOutline: string = "default";
-[@bs.module "../icons/plus-circle-outline"]
-external plusCircleOutline: string = "default";
-[@bs.module "../icons/plus-outline"] external plusOutline: string = "default";
-[@bs.module "../icons/piggy-bank-outline"]
-external piggyBankOutline: string = "default";
-[@bs.module "../icons/target-outline"]
-external targetOutline: string = "default";
-[@bs.module "../icons/single-right-outline"]
-external singleRightOutline: string = "default";
-[@bs.module "../icons/more-vertical"]
-external moreVertical: string = "default";
-[@bs.module "../icons/calendar-outline"]
-external calendarOutline: string = "default";
-[@bs.module "../icons/phone-outline"]
-external phoneOutline: string = "default";
-[@bs.module "../icons/face-id"]
-external faceId: string = "default";
+let%macro.toplevel useIcon = (iconName, iconPath) => {
+  [%str
+    [@bs.module "../icons/$eval{iconPath}"] external eval__iconName: string = "default";
+  ];
+};
+
+[%%useIcon (email, "email")];
+[%%useIcon (emailOutline, "email-outline")];
+[%%useIcon (eye, "eye")];
+[%%useIcon (eyeOutline, "eye-outline")];
+[%%useIcon (eyeInvisible, "eye-invisible")];
+[%%useIcon (eyeInvisibleOutline, "eye-invisible-outline")];
+[%%useIcon (okCircle, "ok-circle")];
+[%%useIcon (calendar, "calendar")];
+[%%useIcon (clockCircleOutline, "clock-circle-outline")];
+[%%useIcon (commentOutline, "comment-outline")];
+[%%useIcon (cancelOutline, "cancel-outline")];
+[%%useIcon (plusCircleOutline, "plus-circle-outline")];
+[%%useIcon (plusOutline, "plus-outline")];
+[%%useIcon (piggyBankOutline, "piggy-bank-outline")];
+[%%useIcon (targetOutline, "target-outline")];
+[%%useIcon (singleRightOutline, "single-right-outline")];
+[%%useIcon (moreVertical, "more-verticle")];
+[%%useIcon (calendarOutline, "calendar-outline")];
+[%%useIcon (phoneOutline, "phone-outline")];
+[%%useIcon (faceId, "face-id")];
 
 let xmlFromIcon = icon =>
   switch (icon) {

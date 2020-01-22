@@ -22,6 +22,7 @@
     "prop-types": "^15.7.2",
     "react-redux": "^5.1.2",
     "react-test-renderer": "16.8.3",
+    "reason-macros-bin": "^1.0.0-alpha.2",
     "reason-react": "^0.7.0",
     "reason-react-native": "^0.61.0",
     "rollup": "^1.27.14",
