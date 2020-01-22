@@ -30,7 +30,7 @@ let%macro.toplevel useIcon = (iconName, iconPath) => {
 [%%useIcon (piggyBankOutline, "piggy-bank-outline")];
 [%%useIcon (targetOutline, "target-outline")];
 [%%useIcon (singleRightOutline, "single-right-outline")];
-[%%useIcon (moreVertical, "more-verticle")];
+[%%useIcon (moreVertical, "more-vertical")];
 [%%useIcon (calendarOutline, "calendar-outline")];
 [%%useIcon (phoneOutline, "phone-outline")];
 [%%useIcon (faceId, "face-id")];
