@@ -1,95 +1,114 @@
-import React, { useState, useEffect } from 'react';
+/**
+ * Sample React Native App
+ * https://github.com/facebook/react-native
+ *
+ * @format
+ * @flow strict-local
+ */
+
+import React from 'react';
 import {
+  SafeAreaView,
+  StyleSheet,
+  ScrollView,
   View,
   Text,
-  TouchableOpacity,
-  FlatList,
-  StyleSheet,
+  StatusBar,
 } from 'react-native';
-import { Provider } from 'react-redux';
-import { createStore } from 'redux';
-import { createAppContainer } from 'react-navigation';
-import { createStackNavigator } from 'react-navigation-stack';
-import * as Font from 'expo-font';
-import routes from './stories/routes';
 
-const menuData = Object.keys(routes).map(route => ({
-  title: routes[route].defaultNavigationOptions.title || route,
-  route,
-}));
+import {
+  Header,
+  LearnMoreLinks,
+  Colors,
+  DebugInstructions,
+  ReloadInstructions,
+} from 'react-native/Libraries/NewAppScreen';
 
-const HomeScreen = ({ navigation }) => (
-  <View style={styles.container}>
-    <FlatList
-      data={menuData}
-      renderItem={({ item }) => (
-        <ListItem
-          title={item.title}
-          onPress={() => navigation.navigate(item.route)}
-        />
-      )}
-      keyExtractor={item => item.title}
-    />
-  </View>
-);
-
-const ListItem = ({ title, onPress }) => (
-  <TouchableOpacity onPress={onPress} style={styles.item}>
-    <Text style={styles.itemText}>{title}</Text>
-  </TouchableOpacity>
-);
-
-const AppNavigator = createStackNavigator(
-  {
-    Home: {
-      screen: HomeScreen,
-      navigationOptions: {
-        title: '👓 RN Hero Design',
-        headerBackTitle: null,
-      },
-    },
-    ...routes,
-  },
-  {
-    initialRouteName: 'Home',
-  },
-);
+const App: () => React$Node = () => {
+  return (
+    <>
+      <StatusBar barStyle="dark-content" />
+      <SafeAreaView>
+        <ScrollView
+          contentInsetAdjustmentBehavior="automatic"
+          style={styles.scrollView}>
+          <Header />
+          {global.HermesInternal == null ? null : (
+            <View style={styles.engine}>
+              <Text style={styles.footer}>Engine: Hermes</Text>
+            </View>
+          )}
+          <View style={styles.body}>
+            <View style={styles.sectionContainer}>
+              <Text style={styles.sectionTitle}>Step One</Text>
+              <Text style={styles.sectionDescription}>
+                Edit <Text style={styles.highlight}>App.js</Text> to change this
+                screen and then come back to see your edits.
+              </Text>
+            </View>
+            <View style={styles.sectionContainer}>
+              <Text style={styles.sectionTitle}>See Your Changes</Text>
+              <Text style={styles.sectionDescription}>
+                <ReloadInstructions />
+              </Text>
+            </View>
+            <View style={styles.sectionContainer}>
+              <Text style={styles.sectionTitle}>Debug</Text>
+              <Text style={styles.sectionDescription}>
+                <DebugInstructions />
+              </Text>
+            </View>
+            <View style={styles.sectionContainer}>
+              <Text style={styles.sectionTitle}>Learn More</Text>
+              <Text style={styles.sectionDescription}>
+                Read the docs to discover what to do next:
+              </Text>
+            </View>
+            <LearnMoreLinks />
+          </View>
+        </ScrollView>
+      </SafeAreaView>
+    </>
+  );
+};
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
+  scrollView: {
+    backgroundColor: Colors.lighter,
   },
-  item: {
-    padding: 16,
-    borderBottomColor: 'grey',
-    borderBottomWidth: StyleSheet.hairlineWidth,
+  engine: {
+    position: 'absolute',
+    right: 0,
   },
-  itemText: {
-    fontSize: 16,
-    textAlign: 'center',
+  body: {
+    backgroundColor: Colors.white,
+  },
+  sectionContainer: {
+    marginTop: 32,
+    paddingHorizontal: 24,
+  },
+  sectionTitle: {
+    fontSize: 24,
+    fontWeight: '600',
+    color: Colors.black,
+  },
+  sectionDescription: {
+    marginTop: 8,
+    fontSize: 18,
+    fontWeight: '400',
+    color: Colors.dark,
+  },
+  highlight: {
+    fontWeight: '700',
+  },
+  footer: {
+    color: Colors.dark,
+    fontSize: 12,
+    fontWeight: '600',
+    padding: 4,
+    paddingRight: 12,
+    textAlign: 'right',
   },
 });
 
-const AppContainer = createAppContainer(AppNavigator);
-
-const store = createStore(state => state, { __theme: undefined });
-
-export default () => {
-  const [fontLoaded, setFontLoaded] = useState(false);
-
-  useEffect(() => {
-    Font.loadAsync({
-      'Proxima Nova': require('./assets/fonts/ProximaNova-Regular.otf'),
-    }).then(() => {
-      setFontLoaded(true);
-    });
-  }, []);
-
-  if (!fontLoaded) return null;
-
-  return (
-    <Provider store={store}>
-      <AppContainer />
-    </Provider>
-  );
-};
+export default App;

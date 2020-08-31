@@ -1,38 +1,34 @@
 {
   "name": "@rn-hero-design/playground",
-  "version": "1.0.0",
-  "main": "__generated__/AppEntry.js",
+  "version": "0.0.1",
+  "private": true,
+  "workspaces": {
+    "nohoist": [
+      "**"
+    ]
+  },
   "scripts": {
-    "start": "expo start --clear",
-    "android": "expo start --android",
-    "ios": "expo start --ios",
-    "web": "expo start --web",
-    "eject": "expo eject",
-    "publish": "expo publish",
-    "postinstall": "expo-yarn-workspaces postinstall",
-    "build:android": "expo build:android -t apk"
+    "android": "react-native run-android",
+    "ios": "react-native run-ios",
+    "start": "react-native start",
+    "test": "jest",
+    "lint": "eslint ."
   },
   "dependencies": {
-    "expo": "^35.0.0",
-    "react": "16.8.3",
-    "react-dom": "16.8.3",
-    "react-native": "https://github.com/expo/react-native/archive/sdk-35.0.0.tar.gz",
-    "react-native-gesture-handler": "~1.3.0",
-    "react-native-reanimated": "~1.2.0",
-    "react-native-screens": "~1.0.0-alpha.23",
-    "react-native-svg": "9.9.5",
-    "react-native-web": "^0.11.7",
-    "react-native-webview": "^10.8.2",
-    "react-navigation": "^4.0.10",
-    "react-navigation-stack": "^1.10.3",
-    "react-redux": "^5.1.2",
-    "redux": "^3.5.2",
-    "rn-hero-design": "*"
+    "react": "16.11.0",
+    "react-native": "0.62.2"
   },
   "devDependencies": {
-    "babel-plugin-inline-import": "^3.0.0",
-    "babel-preset-expo": "^7.1.0",
-    "expo-yarn-workspaces": "^1.2.1"
+    "@babel/core": "^7.6.2",
+    "@babel/runtime": "^7.6.2",
+    "@react-native-community/eslint-config": "^0.0.5",
+    "babel-jest": "^24.9.0",
+    "eslint": "^6.5.1",
+    "jest": "^24.9.0",
+    "metro-react-native-babel-preset": "^0.58.0",
+    "react-test-renderer": "16.11.0"
   },
-  "private": true
+  "jest": {
+    "preset": "react-native"
+  }
 }
