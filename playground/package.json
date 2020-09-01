@@ -19,6 +19,7 @@
     "react-native": "0.62.2",
     "react-native-svg": "~9.9.2",
     "react-native-webview": "^10.8.2",
+    "redux": "^3.5.2",
     "rn-hero-design": "*"
   },
   "devDependencies": {
