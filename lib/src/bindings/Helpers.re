@@ -4,7 +4,7 @@ external injectTheme: React.component('props) => React.component('props) =
 
 let isLandscape = () => {
   let window = ReactNative.Dimensions.get(`window);
-  window##width > window##height;
+  window.width > window.height;
 };
 
 let hasHomeBar = () => {

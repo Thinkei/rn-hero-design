@@ -91,13 +91,13 @@ module DateTimePickerAndroid = {
             let _promise =
               Js.Promise.(
                 DatePickerAndroid.open_(datePickerOptions)
-                |> then_(response => {
-                     if (response##action === DatePickerAndroid.dateSetAction) {
+                |> then_((response: DatePickerAndroid.response) => {
+                     if (response.action === DatePickerAndroid.dateSetAction) {
                        let newDate =
                          Js.Date.makeWithYMD(
-                           ~year=response##year->float_of_int,
-                           ~month=response##month->float_of_int,
-                           ~date=response##day->float_of_int,
+                           ~year=response.year->float_of_int,
+                           ~month=response.month->float_of_int,
+                           ~date=response.day->float_of_int,
                            (),
                          );
                        onChange(newDate);

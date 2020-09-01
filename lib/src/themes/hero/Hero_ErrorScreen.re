@@ -5,7 +5,7 @@ let window = ReactNative.Dimensions.get(`window);
 
 let _CONTAINER_PADDING = _MEDIUM_SIZE *. 2.0;
 let _CONTAINER_BACKGROUND_COLOR = _WHITE;
-let _IMAGE_SIZE = window##width *. 2.0 /. 3.0;
+let _IMAGE_SIZE = window.width *. 2.0 /. 3.0;
 let _IMAGE_MARGIN = _MEDIUM_SIZE;
 let _TITLE_WRAPPER_MARGIN = _SMALL_SIZE;
 let _SUBTITLE_WRAPPER_MARGIN = _SMALL_SIZE;

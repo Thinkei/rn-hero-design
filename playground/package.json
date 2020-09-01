@@ -16,7 +16,10 @@
   },
   "dependencies": {
     "react": "16.11.0",
-    "react-native": "0.62.2"
+    "react-native": "0.62.2",
+    "react-native-svg": "~9.9.2",
+    "react-native-webview": "^10.8.2",
+    "rn-hero-design": "*"
   },
   "devDependencies": {
     "@babel/core": "^7.6.2",

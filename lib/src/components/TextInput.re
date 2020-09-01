@@ -111,7 +111,7 @@ let make =
         !isEmpty(error) ? theme##textInput##errorTextInput : emptyStyle,
         inputStyle,
       |])}>
-      <RNTextInput
+      <ReactNative.TextInput
         testID
         placeholder=placeholder_
         keyboardType=keyboardType_
@@ -148,7 +148,7 @@ let make =
           disabled ? theme##textInput##disabledBaseTextInput : emptyStyle,
         |])}>
         children
-      </RNTextInput>
+      </ReactNative.TextInput>
       <TouchableWithoutFeedback onPress=onPressIcon>
         <Icon
           icon=rightIcon

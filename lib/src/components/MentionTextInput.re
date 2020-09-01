@@ -333,14 +333,14 @@ let make =
     /* setShowSuggestions(_ => false); */
   };
 
-  let handleSelectionChange = event => {
-    let selection = event##nativeEvent##selection;
-    eventSelection := Some((selection##start, selection##_end));
+  let handleSelectionChange = (event: RN.TextInput.selectionChangeEvent) => {
+    let selection = event.nativeEvent.selection;
+    eventSelection := Some((selection.start, selection._end));
     handleChange();
   };
 
-  let handleKeyPress = event => {
-    let key = event##nativeEvent##key;
+  let handleKeyPress = (event: RN.TextInput.keyPressEvent) => {
+    let key = event.nativeEvent.key;
     eventKey := Some(key);
     handleChange();
   };

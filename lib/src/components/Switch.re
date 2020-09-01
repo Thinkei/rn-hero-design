@@ -17,7 +17,12 @@ let make = (~value=false, ~onValueChange=noop, ~theme=Hero_Theme.default) => {
     _ => {
       open Animated.Value.Timing;
       let config =
-        config(~toValue=fromRawValue(offset), ~duration=200.0, ());
+        config(
+          ~toValue=fromRawValue(offset),
+          ~duration=200.0,
+          ~useNativeDriver=true,
+          (),
+        );
       Animated.start(Animated.timing(animatedOffset, config), ());
       None;
     },

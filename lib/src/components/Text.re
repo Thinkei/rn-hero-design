@@ -29,22 +29,22 @@ let (|?) = (x, y) =>
 [@react.component]
 let make =
     (
-      ~testID: string=?,
+      ~testID=?,
       ~children,
       ~size=?,
       ~weight=?,
       ~color=?,
       ~ellipsizeMode=?,
-      ~numberOfLines: int=?,
-      ~onPress: unit => unit=?,
+      ~numberOfLines=?,
+      ~onPress=?,
       ~style=?,
       ~theme=Hero_Theme.default,
     ) =>
   <ReactNative.Text
-    testID
+    ?testID
     ellipsizeMode=?{ellipsizeMode->Belt.Option.flatMap(ellipsizeModeFromJs)}
-    numberOfLines
-    onPress
+    ?numberOfLines
+    ?onPress
     style={StyleSheet.flatten([|
       theme##text##text,
       Belt.Option.mapWithDefault(size, emptyStyle, size =>
