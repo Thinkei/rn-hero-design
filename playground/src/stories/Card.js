@@ -14,8 +14,7 @@ import { FOCUS_BLUE_1 } from 'rn-hero-design/src/themes/hero/variables';
 const CardScreen = ({ theme }) => (
   <ScrollView
     style={{ backgroundColor: theme.variables.GREY_5 }}
-    contentContainerStyle={{ padding: theme.variables.SMALL_SIZE }}
-  >
+    contentContainerStyle={{ padding: theme.variables.SMALL_SIZE }}>
     <SafeAreaView forceInset={{ bottom: 'always' }}>
       <StyledCard>
         <Container>
@@ -165,7 +164,7 @@ const StyledNumber = injectTheme(({ theme, ...props }) => (
 CardScreen.navigationOptions = {
   headerTitle: () => (
     <Image
-      source={require('../assets/header_logo.png')}
+      source={require('../images/header_logo.png')}
       resizeMode="contain"
       style={{ height: 28 }}
     />

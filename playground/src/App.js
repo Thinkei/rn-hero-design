@@ -1,31 +1,30 @@
-import React, { useState, useEffect } from 'react';
-import {
-  View,
-  Text,
-  TouchableOpacity,
-  FlatList,
-  StyleSheet,
-} from 'react-native';
-import { Provider } from 'react-redux';
+import 'react-native-gesture-handler';
+import * as React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+
 import { createStore } from 'redux';
-import { createAppContainer } from 'react-navigation';
-import { createStackNavigator } from 'react-navigation-stack';
-import * as Font from 'expo-font';
+import { Provider } from 'react-redux';
+
+import { View, FlatList } from 'react-native';
+import { ListItem } from 'rn-hero-design';
+
 import routes from './stories/routes';
 
-const menuData = Object.keys(routes).map(route => ({
-  title: routes[route].defaultNavigationOptions.title || route,
-  route,
+const menuData = Object.keys(routes).map(name => ({
+  title: name,
+  screen: routes[name].screen,
 }));
 
 const HomeScreen = ({ navigation }) => (
-  <View style={styles.container}>
+  <View style={{ flex: 1 }}>
     <FlatList
       data={menuData}
       renderItem={({ item }) => (
         <ListItem
           title={item.title}
-          onPress={() => navigation.navigate(item.route)}
+          onPress={() => navigation.navigate(item.title)}
+          wrapperStyle={{ minHeight: 0 }}
         />
       )}
       keyExtractor={item => item.title}
@@ -33,63 +32,21 @@ const HomeScreen = ({ navigation }) => (
   </View>
 );
 
-const ListItem = ({ title, onPress }) => (
-  <TouchableOpacity onPress={onPress} style={styles.item}>
-    <Text style={styles.itemText}>{title}</Text>
-  </TouchableOpacity>
-);
-
-const AppNavigator = createStackNavigator(
-  {
-    Home: {
-      screen: HomeScreen,
-      navigationOptions: {
-        title: '👓 RN Hero Design',
-        headerBackTitle: null,
-      },
-    },
-    ...routes,
-  },
-  {
-    initialRouteName: 'Home',
-  },
-);
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-  item: {
-    padding: 16,
-    borderBottomColor: 'grey',
-    borderBottomWidth: StyleSheet.hairlineWidth,
-  },
-  itemText: {
-    fontSize: 16,
-    textAlign: 'center',
-  },
-});
-
-const AppContainer = createAppContainer(AppNavigator);
+const Stack = createStackNavigator();
 
 const store = createStore(state => state, { __theme: undefined });
 
-export default () => {
-  const [fontLoaded, setFontLoaded] = useState(false);
+const App = () => (
+  <Provider store={store}>
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="RN Hero Design" component={HomeScreen} />
+        {menuData.map(({ title, screen }) => (
+          <Stack.Screen key={title} name={title} component={screen} />
+        ))}
+      </Stack.Navigator>
+    </NavigationContainer>
+  </Provider>
+);
 
-  useEffect(() => {
-    Font.loadAsync({
-      'Proxima Nova': require('./assets/fonts/ProximaNova-Regular.otf'),
-    }).then(() => {
-      setFontLoaded(true);
-    });
-  }, []);
-
-  if (!fontLoaded) return null;
-
-  return (
-    <Provider store={store}>
-      <AppContainer />
-    </Provider>
-  );
-};
+export default App;

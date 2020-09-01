@@ -17,7 +17,7 @@ const LoginScreen = ({ navigation }) => {
       <KeyboardAvoidingView style={styles.keyboardAvoidingView}>
         <View style={styles.loginForm}>
           <Image
-            source={require('../assets/login_logo.png')}
+            source={require('../images/login_logo.png')}
             resizeMode="contain"
             style={styles.logo}
           />
@@ -61,8 +61,7 @@ const LoginScreen = ({ navigation }) => {
           <Text
             size="h5"
             color={INVERTED_TEXT_COLOR}
-            style={{ marginBottom: 16, textAlign: 'center' }}
-          >
+            style={{ marginBottom: 16, textAlign: 'center' }}>
             Email me a magic login link
           </Text>
         </View>
