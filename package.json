@@ -11,7 +11,9 @@
     ]
   },
   "resolutions": {
-    "json5": "2.1.3"
+    "json5": "2.1.3",
+    "globals": "12.4.0",
+    "react-test-renderer": "16.11.0"
   },
   "scripts": {
     "lib": "yarn workspace rn-hero-design",
