@@ -19,7 +19,7 @@
     "@ehrocks/pdf-editor",
     "@glennsl/bs-json",
     "bs-hero-design",
-    "reason-react",
-    "reason-react-native"
+    "@rescript/react",
+    "rescript-react-native"
   ]
 }

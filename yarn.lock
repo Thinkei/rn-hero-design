@@ -1350,6 +1350,11 @@
     color "^3.1.2"
     react-native-iphone-x-helper "^1.2.1"
 
+"@rescript/react@^0.10.3":
+  version "0.10.3"
+  resolved "https://registry.npmjs.org/@rescript/react/-/react-0.10.3.tgz#a2a8bed6b017940ec26c2154764b350f50348889"
+  integrity sha512-Lf9rzrR3bQPKJjOK3PBRa/B3xrJ7CqQ1HYr9VHPVxJidarIJJFZBhj0Dg1uZURX+Wg/xiP0PHFxXmdj2bK8Vxw==
+
 "@styled-system/background@^5.1.2":
   version "5.1.2"
   resolved "https://registry.npmjs.org/@styled-system/background/-/background-5.1.2.tgz#75c63d06b497ab372b70186c0bf608d62847a2ba"
@@ -1551,6 +1556,14 @@
     "@types/istanbul-lib-coverage" "*"
     "@types/istanbul-lib-report" "*"
 
+"@types/jest@^25.2.1":
+  version "25.2.3"
+  resolved "https://registry.npmjs.org/@types/jest/-/jest-25.2.3.tgz#33d27e4c4716caae4eced355097a47ad363fdcaf"
+  integrity sha512-JXc1nK/tXHiDhV55dvfzqtmP4S3sy3T3ouV2tkViZgxY/zeUkcpQcQPGRlgF4KmWzWW5oiWYSZwtCB+2RsE4Fw==
+  dependencies:
+    jest-diff "^25.2.1"
+    pretty-format "^25.2.1"
+
 "@types/json-schema@^7.0.3":
   version "7.0.6"
   resolved "https://registry.npmjs.org/@types/json-schema/-/json-schema-7.0.6.tgz#f4c7ec43e81b319a9815115031709f26987891f0"
@@ -1571,6 +1584,11 @@
   resolved "https://registry.npmjs.org/@types/node/-/node-14.14.33.tgz#9e4f8c64345522e4e8ce77b334a8aaa64e2b6c78"
   integrity sha512-oJqcTrgPUF29oUP8AsUqbXGJNuPutsetaa9kTQAQce5Lx5dTYWV02ScBiT/k1BX/Z7pKeqedmvp39Wu4zR7N7g==
 
+"@types/node@^13.13.4":
+  version "13.13.52"
+  resolved "https://registry.npmjs.org/@types/node/-/node-13.13.52.tgz#03c13be70b9031baaed79481c0c0cfb0045e53f7"
+  integrity sha512-s3nugnZumCC//n4moGGe6tkNMyYEdaDBitVjwPxXmR5lnMG5dHePinH2EdxkG3Rh1ghFHHixAG4NJhpJW1rthQ==
+
 "@types/parse-json@^4.0.0":
   version "4.0.0"
   resolved "https://registry.npmjs.org/@types/parse-json/-/parse-json-4.0.0.tgz#2f8bb441434d163b35fb8ffdccd7138927ffb8c0"
@@ -1581,10 +1599,33 @@
   resolved "https://registry.npmjs.org/@types/prop-types/-/prop-types-15.7.3.tgz#2ab0d5da2e5815f94b0b9d4b95d1e5f243ab2ca7"
   integrity sha512-KfRL3PuHmqQLOG+2tGpRO26Ctg+Cq1E01D2DMriKEATHgWLfeNDmq9e29Q9WIky0dQ3NPkd1mzYH8Lm936Z9qw==
 
+"@types/react-dom@^16.9.7":
+  version "16.9.13"
+  resolved "https://registry.npmjs.org/@types/react-dom/-/react-dom-16.9.13.tgz#5898f0ee68fe200685e6b61d3d7d8828692814d0"
+  integrity sha512-34Hr3XnmUSJbUVDxIw/e7dhQn2BJZhJmlAaPyPwfTQyuVS9mV/CeyghFcXyvkJXxI7notQJz8mF8FeCVvloJrA==
+  dependencies:
+    "@types/react" "^16"
+
+"@types/react-native@0.64.3":
+  version "0.64.3"
+  resolved "https://registry.npmjs.org/@types/react-native/-/react-native-0.64.3.tgz#02b3eec685e51995a90468382f6bb5d9fff20257"
+  integrity sha512-gOQfWlp5Z5MS4RRvH1u9HfnL7QUspiGyYuGWgxL4lXi7hIKriAVSMtdIToJF+8cED8MemFe45PmQeSvDeSTgSA==
+  dependencies:
+    "@types/react" "*"
+
 "@types/react@*":
   version "17.0.3"
   resolved "https://registry.npmjs.org/@types/react/-/react-17.0.3.tgz#ba6e215368501ac3826951eef2904574c262cc79"
   integrity sha512-wYOUxIgs2HZZ0ACNiIayItyluADNbONl7kt8lkLjVK8IitMH5QMyAh75Fwhmo37r1m7L2JaFj03sIfxBVDvRAg==
+  dependencies:
+    "@types/prop-types" "*"
+    "@types/scheduler" "*"
+    csstype "^3.0.2"
+
+"@types/react@^16", "@types/react@^16.8.1":
+  version "16.14.10"
+  resolved "https://registry.npmjs.org/@types/react/-/react-16.14.10.tgz#76bc1c42ed5ab0d2ab13e5c58faaccaad3449477"
+  integrity sha512-QadBsMyF6ldjEAXEhsmEW/L0uBDJT8yw7Qoe5sRnEKVrzMkiYoJwqoL5TKJOlArsn/wvIJM/XdVzkdL6+AS64Q==
   dependencies:
     "@types/prop-types" "*"
     "@types/scheduler" "*"
@@ -2639,16 +2680,16 @@ bs-guid@^1.0.1:
     uuid "^3.3.2"
 
 bs-hero-design@^0.1.18:
-  version "0.1.18"
-  resolved "https://registry.npmjs.org/bs-hero-design/-/bs-hero-design-0.1.18.tgz#54c7393cb68a85aca141781f6e24ff9ff46c672c"
-  integrity sha512-s+7JKHSTczZL6fYiL2xBRxvZj1YSm8/CbkVbJf83G6xHVwpEVWxn2VJYG5DqrxkTuPAFUatrOy6QdZ4J7Yd3MQ==
+  version "0.1.19"
+  resolved "https://registry.npmjs.org/bs-hero-design/-/bs-hero-design-0.1.19.tgz#6511e3c14e68156ea9b90a1cab163df5853eb500"
+  integrity sha512-V6AMfiOaRP7+xObDS1kBkkd6JH86/t3m05jNGv/8aDBFLitD6e5kvPQo5uSxWA2ls2m9LBlKeLBoE1OZulbMLQ==
   dependencies:
     reason-react "^0.9.1"
 
-bs-platform@^7.3.0:
-  version "7.3.2"
-  resolved "https://registry.npmjs.org/bs-platform/-/bs-platform-7.3.2.tgz#301f5c9b4e8cf5713cb60ca22e145e56e793affe"
-  integrity sha512-seJL5g4anK9la4erv+B2o2sMHQCxDF6OCRl9en3hbaUos/S3JsusQ0sPp4ORsbx5eXfHLYBwPljwKXlgpXtsgQ==
+bs-platform@9.0.2:
+  version "9.0.2"
+  resolved "https://registry.npmjs.org/bs-platform/-/bs-platform-9.0.2.tgz#a6eac70eb8924a322556dacaccbfbc9b2a0d3a37"
+  integrity sha512-Ye9JqJ4Oa7mcjjoOVRYI8Uc2Cf8N7jQLWDcdUplY7996d/YErSR7WitmV7XnSwr4EvdrbwjEsg1NxNjUQv3ChA==
 
 bser@2.1.1:
   version "2.1.1"
@@ -3504,6 +3545,11 @@ diff-sequences@^24.9.0:
   version "24.9.0"
   resolved "https://registry.npmjs.org/diff-sequences/-/diff-sequences-24.9.0.tgz#5715d6244e2aa65f48bba0bc972db0b0b11e95b5"
   integrity sha512-Dj6Wk3tWyTE+Fo1rW8v0Xhwk80um6yFYKbuAxc9c3EZxIHFDYwbi34Uk42u1CdnIiVorvt4RmlSDjIPyzGC2ew==
+
+diff-sequences@^25.2.6:
+  version "25.2.6"
+  resolved "https://registry.npmjs.org/diff-sequences/-/diff-sequences-25.2.6.tgz#5f467c00edd35352b7bca46d7927d60e687a76dd"
+  integrity sha512-Hq8o7+6GaZeoFjtpgvRBUknSXNeJiCx7V9Fr94ZMljNiCr9n9L8H8aJqgWOQiDDGdyn29fRNcDdRVJ5fdyihfg==
 
 diffie-hellman@^5.0.0:
   version "5.0.3"
@@ -4568,6 +4614,11 @@ gensync@^1.0.0-beta.1:
   resolved "https://registry.npmjs.org/gensync/-/gensync-1.0.0-beta.1.tgz#58f4361ff987e5ff6e1e7a210827aa371eaac269"
   integrity sha512-r8EC6NO1sngH/zdD9fiRDLdcgnbayXah+mLgManTaIZJqEC1MZstmnox8KpnI2/fxQwrp5OpCOYWLp4rBl4Jcg==
 
+gentype@4.1.0:
+  version "4.1.0"
+  resolved "https://registry.npmjs.org/gentype/-/gentype-4.1.0.tgz#ebc194894ec0aa637b082661419c6101bb0139b5"
+  integrity sha512-M3Dqd2tokJ7X1KLyMP0bqwk/TvOPI5hYW24j2Jy5RMToWfdKvdqoxWsMTWuPxWauSi/CBQjJS/AOhqsd0Sy1Mw==
+
 get-caller-file@^2.0.1:
   version "2.0.5"
   resolved "https://registry.npmjs.org/get-caller-file/-/get-caller-file-2.0.5.tgz#4f94412a82db32f36e3b0b9741f8a97feb031f7e"
@@ -5549,6 +5600,16 @@ jest-diff@^24.9.0:
     jest-get-type "^24.9.0"
     pretty-format "^24.9.0"
 
+jest-diff@^25.2.1:
+  version "25.5.0"
+  resolved "https://registry.npmjs.org/jest-diff/-/jest-diff-25.5.0.tgz#1dd26ed64f96667c068cef026b677dfa01afcfa9"
+  integrity sha512-z1kygetuPiREYdNIumRpAHY6RXiGmp70YHptjdaxTWGmA085W3iCnXNx0DhflK3vwrKmrRWyY1wUpkPMVxMK7A==
+  dependencies:
+    chalk "^3.0.0"
+    diff-sequences "^25.2.6"
+    jest-get-type "^25.2.6"
+    pretty-format "^25.5.0"
+
 jest-docblock@^21.0.0:
   version "21.2.0"
   resolved "https://registry.npmjs.org/jest-docblock/-/jest-docblock-21.2.0.tgz#51529c3b30d5fd159da60c27ceedc195faf8d414"
@@ -5599,6 +5660,11 @@ jest-get-type@^24.9.0:
   version "24.9.0"
   resolved "https://registry.npmjs.org/jest-get-type/-/jest-get-type-24.9.0.tgz#1684a0c8a50f2e4901b6644ae861f579eed2ef0e"
   integrity sha512-lUseMzAley4LhIcpSP9Jf+fTrQ4a1yHQwLNeeVa2cEmbCGeoZAtYPOIv8JaxLD/sUpKxetKGP+gsHl8f8TSj8Q==
+
+jest-get-type@^25.2.6:
+  version "25.2.6"
+  resolved "https://registry.npmjs.org/jest-get-type/-/jest-get-type-25.2.6.tgz#0b0a32fab8908b44d508be81681487dbabb8d877"
+  integrity sha512-DxjtyzOHjObRM+sM1knti6or+eOgcGU4xVSb2HNP1TqO4ahsT+rqZg+nyqHWJSvWgKC5cG3QjGFBqxLghiF/Ig==
 
 jest-haste-map@^24.7.1, jest-haste-map@^24.9.0:
   version "24.9.0"
@@ -7515,7 +7581,7 @@ pretty-format@^24.7.0, pretty-format@^24.9.0:
     ansi-styles "^3.2.0"
     react-is "^16.8.4"
 
-pretty-format@^25.1.0, pretty-format@^25.2.0:
+pretty-format@^25.1.0, pretty-format@^25.2.0, pretty-format@^25.2.1, pretty-format@^25.5.0:
   version "25.5.0"
   resolved "https://registry.npmjs.org/pretty-format/-/pretty-format-25.5.0.tgz#7873c1d774f682c34b8d48b6743a2bf2ac55791a"
   integrity sha512-kbo/kq2LQ/A/is0PQwsEHM7Ca6//bGPPvU6UnsdDRSKTWxT/ru/xb88v4BJf6a69H+uTytOEsTusT9ksd/1iWQ==
@@ -7726,16 +7792,6 @@ react-dnd@^11.1.3:
     "@types/hoist-non-react-statics" "^3.3.1"
     dnd-core "^11.1.3"
     hoist-non-react-statics "^3.3.0"
-
-react-dom@16.11.0:
-  version "16.11.0"
-  resolved "https://registry.npmjs.org/react-dom/-/react-dom-16.11.0.tgz#7e7c4a5a85a569d565c2462f5d345da2dd849af5"
-  integrity sha512-nrRyIUE1e7j8PaXSPtyRKtz+2y9ubW/ghNgqKFHHAHaeP0fpF5uXR+sq8IMRHC+ZUxw7W9NyCDTBtwWxvkb0iA==
-  dependencies:
-    loose-envify "^1.1.0"
-    object-assign "^4.1.1"
-    prop-types "^15.6.2"
-    scheduler "^0.17.0"
 
 react-is@^16.12.0, react-is@^16.13.0, react-is@^16.6.0, react-is@^16.7.0, react-is@^16.8.4, react-is@^16.8.6, react-is@^16.9.0:
   version "16.13.1"
@@ -8005,11 +8061,6 @@ realpath-native@^1.1.0:
   dependencies:
     util.promisify "^1.0.0"
 
-reason-react-native@^0.62.3:
-  version "0.62.3"
-  resolved "https://registry.npmjs.org/reason-react-native/-/reason-react-native-0.62.3.tgz#a2653e735b5a006c7efcb20dcdf0e2ebe922cf8f"
-  integrity sha512-PA//0AZVVEB8iJKjYxOoFarXrMhhr7H++k9n7SmwVNy+XeUtwCiTIytqi29dCILtfNieHfT7+WTPpEzg2koOBg==
-
 reason-react@^0.9.1:
   version "0.9.1"
   resolved "https://registry.npmjs.org/reason-react/-/reason-react-0.9.1.tgz#30a887158200b659aa03e2d75ff4cc54dc462bb0"
@@ -8197,6 +8248,16 @@ require-resolve@0.0.2:
   integrity sha1-urQQqxruLz9Vt5MXRR3TQodk5vM=
   dependencies:
     x-path "^0.0.2"
+
+rescript-react-native@0.64.3:
+  version "0.64.3"
+  resolved "https://registry.npmjs.org/rescript-react-native/-/rescript-react-native-0.64.3.tgz#8fd11a2681cfdd65c02f0ff620186e5adf0c6854"
+  integrity sha512-PjGDkV3RYiCTk4hCZyaKtZJV69By0AmJuzWyuHZONdeCB0q3DwjVJtA73gu6+jBrdl0OWon6UdXaVRXhhR47cQ==
+
+rescript@9.1.3:
+  version "9.1.3"
+  resolved "https://registry.npmjs.org/rescript/-/rescript-9.1.3.tgz#1a0f41342acd8dc4e26fd1782d0997b8a7577698"
+  integrity sha512-TpfW3DakgCJtWbRvAek7cysuikBWarjqt8PrbFg0Rk3O+o4dt0inBdxyZe/+u3LOAWzyKK+2UlqC0xiCBgs6pQ==
 
 resolve-cwd@^2.0.0:
   version "2.0.0"
@@ -9368,6 +9429,11 @@ typedarray@^0.0.6:
   version "0.0.6"
   resolved "https://registry.npmjs.org/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
+
+typescript@3.9.2:
+  version "3.9.2"
+  resolved "https://registry.npmjs.org/typescript/-/typescript-3.9.2.tgz#64e9c8e9be6ea583c54607677dd4680a1cf35db9"
+  integrity sha512-q2ktq4n/uLuNNShyayit+DTobV2ApPEo/6so68JaD5ojvc/6GClBipedB9zNWYxRSAlZXAe405Rlijzl6qDiSw==
 
 ua-parser-js@^0.7.18:
   version "0.7.21"
