@@ -1,6 +1,6 @@
 {
   "name": "rn-hero-design",
-  "version": "3.4.0-beta.2",
+  "version": "3.4.0-beta.5",
   "description": "",
   "main": "lib.js",
   "types": "./dist/src/index.d.ts",
@@ -36,6 +36,7 @@
     "@types/react-dom": "^16.9.7",
     "@types/react-native": "0.64.3",
     "@types/react-redux": "^7.1.16",
+    "@types/webpack": "^4.41.0",
     "@typescript-eslint/eslint-plugin": "^4.28.2",
     "@typescript-eslint/parser": "^4.28.2",
     "babel-loader": "^8.2.2",
@@ -60,6 +61,7 @@
     "style-loader": "^2.0.0",
     "styled-components": "^4.4.1",
     "svg-inline-loader": "^0.8.2",
+    "ts-node": "^10.1.0",
     "typescript": "3.5.3",
     "url-loader": "^4.1.1",
     "webpack": "^4.46.0",
